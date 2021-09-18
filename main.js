@@ -27,10 +27,16 @@ function mostraTarefas(){
 
 function adicionarTarefa(){
     const textoTarefa = elementoInput.value
+    if (textoTarefa === '') {
+            alert("Você não pode inserir um campo em branco!");
+    }
+
+    else {
     tarefas.push(textoTarefa);
     elementoInput.value = '';
 
     mostraTarefas();
+}
 }
 
 function excluiTarefa(pos){
